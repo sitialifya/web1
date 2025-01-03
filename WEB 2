@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tas Minimalis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #462C1D; /* Warna teks utama */
+            margin: 0;
+            background: #F8EAD8; /* Background tengah */
+        }
+
+        header {
+            background: #C7B198; /* Background atas */
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #462C1D; /* Warna teks judul */
+            font-size: 2rem;
+        }
+
+        nav {
+            background: #735851; /* Background nav */
+            color: #462C1D;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #462C1D;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            background: #735851; /* Background untuk tulisan Beranda */
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: #F0D9C9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            color: #462C1D;
+            margin: 0.5rem 0;
+        }
+
+        .product-card p {
+            color: #462C1D;
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .product-card button {
+            background: #735851; /* Background untuk tombol Beli Sekarang */
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background: #555;
+        }
+
+        footer {
+            background: #C7B198; /* Background bawah */
+            color: #462C1D;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tas Minimalis</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="welcomeMessage()">Beranda</a>
+        <a href="#" onclick="showProducts()">Produk</a>
+        <a href="#">Kontak</a>
+    </nav>
+    <div class="container">
+        <section id="welcome" style="display: block; text-align: center;">
+            <h2>Selamat datang di Toko Tas Minimalis</h2>
+            <p>Selamat Berbelanja</p>
+            <button onclick="showProducts()">Pilih Produk</button>
+        </section>
+
+        <section class="product" id="product-section" style="display: none;">
+            <div class="product-card">
+                <img src="images/Tas1.jpeg" alt="Yeri Bag">
+                <h3>Yeri Bag</h3>
+                <p>Rp 500.000</p>
+                <button onclick="addToCart(500000, 'Yeri Bag')">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tas2.jpeg" alt="Bona Bag">
+                <h3>Bona Bag</h3>
+                <p>Rp 250.000</p>
+                <button onclick="addToCart(250000, 'Bona Bag')">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tas3.jpeg" alt="Yujin Bag">
+                <h3>Yujin Bag</h3>
+                <p>Rp 300.000</p>
+                <button onclick="addToCart(300000, 'Yujin Bag')">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tas4.jpeg" alt="Yumi Bag">
+                <h3>Yumi Bag</h3>
+                <p>Rp 230.000</p>
+                <button onclick="addToCart(300000, 'Yumi Bag')">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tas5.jpeg" alt="Taupe Shoulder Bag">
+                <h3>Taupe Shoulder Bag</h3>
+                <p>Rp 120.000</p>
+                <button onclick="addToCart(300000, 'Taupe Shoulder Bag')">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tas6.jpeg" alt="Nuka Shoulder">
+                <h3>Nuka Shoulder</h3>
+                <p>Rp 150.000</p>
+                <button onclick="addToCart(300000, 'Nuka Shoulder')">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-card">
+                <img src="images/Tas7.jpeg" alt="York Backpack">
+                <h3>York Backpack</h3>
+                <p>Rp 300.000</p>
+                <button onclick="addToCart(300000, 'York Backpack')">Tambah ke Keranjang</button>
+            </div>
+            <div>
+                <button onclick="checkout()">Lihat Total Belanja</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tas Minimalis. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        let totalBelanja = 0;
+        let cart = [];
+
+        function welcomeMessage() {
+            document.getElementById('welcome').style.display = 'block';
+            document.getElementById('product-section').style.display = 'none';
+        }
+
+        function showProducts() {
+            document.getElementById('welcome').style.display = 'none';
+            document.getElementById('product-section').style.display = 'flex';
+        }
+
+        function addToCart(price, productName) {
+            totalBelanja += price;
+            cart.push(productName);
+            alert(productName + ' berhasil ditambahkan ke keranjang.');
+        }
+
+        function checkout() {
+            const cartItems = cart.length > 0 ? cart.join(', ') : 'Tidak ada barang di keranjang.';
+            const paymentMethod = prompt('Total belanja Anda: Rp ' + totalBelanja + '\nBarang yang dibeli: ' + cartItems + '\nMetode pembayaran: Cash, Debit, atau QRIS?');
+            if (paymentMethod) {
+                alert('Anda memilih pembayaran dengan ' + paymentMethod + '. Terima kasih telah berbelanja!');
+            } else {
+                alert('Silakan pilih metode pembayaran untuk melanjutkan.');
+            }
+        }
+    </script>
+</body>
+</html>
